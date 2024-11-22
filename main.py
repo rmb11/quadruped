@@ -4,10 +4,16 @@ import ujson
 import time
 import sys
 
-# Initialize the servos
 servos = [Servo(pin=p) for p in range(8)]
 
 while True:
+    """Main loop to handle commands and control servos.
+
+    Continuously listens for JSON encoded commands via stdin, decodes the commands and updates the positions of the connected servos.
+
+    If a decoding error occurs, an error message is printed.
+
+    """
     command = sys.stdin.readline().strip()
     if command:
         try:
