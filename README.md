@@ -58,3 +58,59 @@ The system allows users to control the robot's servos, save and load robot state
 ## Demo Video
 [![Demo Video](https://img.youtube.com/vi/VrJfyDyFLqI/0.jpg)](https://youtube.com/shorts/VrJfyDyFLqI?si=_aOQxeyFzYjAQ-8Y)
 
+## External Libraries and Dependencies
+
+This project uses several external libraries to handle different functionalities. Below is a list of the libraries, their purpose, licenses, and installation instructions.
+
+### Python Libraries (PC-Side)
+1. **`pyserial`**
+   - **Purpose:** For serial communication between the PC and the Raspberry Pi Pico.
+   - **License:** [Python Software Foundation License (PSFL)](https://docs.python.org/3/license.html)
+   - **Installation:** Run the following command:
+     ```bash
+     pip install pyserial
+     ```
+
+2. **`tkinter`**
+   - **Purpose:** Provides the graphical user interface (GUI) for controlling the quadruped robot.
+   - **License:** [Python Software Foundation License (PSFL)](https://docs.python.org/3/license.html)
+   - **Note:** This library is included with Python on most systems and does not require installation.
+
+3. **`json`**
+   - **Purpose:** Used for state saving and loading of robot states.
+   - **License:** [Python Software Foundation License (PSFL)](https://docs.python.org/3/license.html)
+   - **Note:** This is a built-in Python library and no additional installation is needed.
+
+4. **`time`**
+   - **Purpose:** Adds delays and time functionalities in the scripts.
+   - **License:** [Python Software Foundation License (PSFL)](https://docs.python.org/3/license.html)
+   - **Note:** This is a built-in Python library.
+
+---
+
+### MicroPython Libraries (Pico-Side)
+1. **`machine`**
+   - **Purpose:** Provides access to GPIO pins and PWM for servo control.
+   - **License:** [MIT License](https://github.com/micropython/micropython/blob/master/LICENSE)
+   - **Installation:** Included with MicroPython.
+
+2. **`ujson`**
+   - **Purpose:** Handles JSON encoding and decoding for command processing.
+   - **License:** [MIT License](https://github.com/micropython/micropython/blob/master/LICENSE)
+   - **Installation:** Included with MicroPython.
+
+3. **`sys`**
+   - **Purpose:** Allows reading from standard input (`stdin`) for receiving commands on the Pico.
+   - **License:** [MIT License](https://github.com/micropython/micropython/blob/master/LICENSE)
+   - **Installation:** Included with MicroPython.
+
+4. **`time`**
+   - **Purpose:** Adds delay functionality in the main control loop.
+   - **License:** [MIT License](https://github.com/micropython/micropython/blob/master/LICENSE)
+   - **Installation:** Included with MicroPython.
+
+---
+
+### Licenses
+- **Project License:** This project is licensed under the [MIT License](LICENSE).
+- Each library's license is linked above for reference.
